@@ -1,0 +1,31 @@
+<!-- importing the header -->
+<%- include('partials/header') -%>
+    <div class="container lg:w-50">
+        <h1 class="text-center my-4">Upload Images Here</h1>
+        <!-- Single File Upload -->
+        <h3 class="mt-5 mb-2">Single Upload </h3>
+
+        <div class="custom-file mb-5">
+            <form class="form-control" action="/uploadSingle" enctype="multipart/form-data" method="POST">
+                    <input name="singleImage" type="file" class="custom-file-input">
+                    <label class="custom-file-label" for="customFile">Choose Image</label>
+                    <input type="submit" class="btn btn-success btn-block my-2" type="submit" value="Upload A Single Image">
+            </form>
+        </div>
+
+
+        <!-- Multiple Files Upload -->
+        <h3 class="mt-5 mb-2">Multiple Uploads </h3>
+
+        <div class="custom-file">
+            <form class="form-control" action="/uploadMultiple" enctype="multipart/form-data" method="POST">
+                    <input name="multipleImages" type="file" class="custom-file-input" multiple>
+                    <label class="custom-file-label" for="customFile">Choose Image</label>
+                    <input type="submit" class="btn btn-danger btn-block my-2 " type="submit" value="Upload Multiple Images">
+            </form>
+        </div>
+
+    </div>
+
+<!-- importing the footer -->
+<%- include('partials/footer') -%>
